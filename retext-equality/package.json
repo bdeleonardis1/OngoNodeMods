@@ -1,0 +1,135 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "retext-equality@^1.5.0",
+        "scope": null,
+        "escapedName": "retext-equality",
+        "name": "retext-equality",
+        "rawSpec": "^1.5.0",
+        "spec": ">=1.5.0 <2.0.0",
+        "type": "range"
+      },
+      "C:\\Users\\bdele\\Documents\\ongo_project\\node_modules\\alex"
+    ]
+  ],
+  "_from": "retext-equality@>=1.5.0 <2.0.0",
+  "_id": "retext-equality@1.6.4",
+  "_inCache": true,
+  "_location": "/retext-equality",
+  "_nodeVersion": "5.1.0",
+  "_npmUser": {
+    "name": "wooorm",
+    "email": "tituswormer@gmail.com"
+  },
+  "_npmVersion": "3.5.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "retext-equality@^1.5.0",
+    "scope": null,
+    "escapedName": "retext-equality",
+    "name": "retext-equality",
+    "rawSpec": "^1.5.0",
+    "spec": ">=1.5.0 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/alex"
+  ],
+  "_resolved": "https://registry.npmjs.org/retext-equality/-/retext-equality-1.6.4.tgz",
+  "_shasum": "2ea7c724eb8bec4b15e07af3d5cda82aa22b700f",
+  "_shrinkwrap": null,
+  "_spec": "retext-equality@^1.5.0",
+  "_where": "C:\\Users\\bdele\\Documents\\ongo_project\\node_modules\\alex",
+  "author": {
+    "name": "Titus Wormer",
+    "email": "tituswormer@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/wooorm/retext-equality/issues"
+  },
+  "dependencies": {
+    "nlcst-is-literal": "^1.0.0",
+    "nlcst-to-string": "^1.0.0",
+    "object-keys": "^1.0.7",
+    "pluralize": "^1.1.4",
+    "unist-util-visit": "^1.0.0"
+  },
+  "description": "Warn about possible insensitive, inconsiderate language with Retext",
+  "devDependencies": {
+    "array-duplicated": "^1.0.1",
+    "browserify": "^12.0.0",
+    "eslint": "^1.0.0",
+    "esmangle": "^1.0.1",
+    "istanbul": "^0.4.0",
+    "js-yaml": "^3.3.1",
+    "jscs": "^2.0.0",
+    "jscs-jsdoc": "^1.0.0",
+    "mdast": "^2.0.0",
+    "mdast-comment-config": "^1.0.0",
+    "mdast-github": "^1.0.0",
+    "mdast-lint": "^1.0.0",
+    "mdast-slug": "^2.0.0",
+    "mdast-validate-links": "^1.0.0",
+    "mocha": "^2.0.0",
+    "retext": "^1.0.0-rc.3",
+    "vfile": "^1.0.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "2ea7c724eb8bec4b15e07af3d5cda82aa22b700f",
+    "tarball": "https://registry.npmjs.org/retext-equality/-/retext-equality-1.6.4.tgz"
+  },
+  "files": [
+    "lib",
+    "index.js"
+  ],
+  "gitHead": "a2087554f27833e2bffab7cab76a3e0daffa23c4",
+  "homepage": "https://github.com/wooorm/retext-equality#readme",
+  "keywords": [
+    "equal",
+    "race",
+    "religion",
+    "sex",
+    "orientation",
+    "identity",
+    "gender",
+    "sensitive",
+    "insensitive",
+    "neutral",
+    "writing",
+    "language",
+    "english",
+    "retext"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "wooorm",
+      "email": "tituswormer@gmail.com"
+    }
+  ],
+  "name": "retext-equality",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wooorm/retext-equality.git"
+  },
+  "scripts": {
+    "build": "npm run build-md && npm run build-extract && npm run build-bundle && npm run build-mangle",
+    "build-bundle": "browserify index.js --no-builtins -s retextEquality > retext-equality.js",
+    "build-extract": "node script/extract.js",
+    "build-mangle": "esmangle retext-equality.js > retext-equality.min.js",
+    "build-md": "mdast . --quiet --frail",
+    "lint": "npm run lint-api && npm run lint-style",
+    "lint-api": "eslint .",
+    "lint-style": "jscs --reporter inline .",
+    "make": "npm run lint && npm run test-coverage",
+    "test": "npm run build && npm run lint && npm run test-coverage",
+    "test-api": "mocha --check-leaks test.js",
+    "test-coverage": "istanbul cover _mocha -- test.js",
+    "test-travis": "npm run test-coverage"
+  },
+  "version": "1.6.4"
+}

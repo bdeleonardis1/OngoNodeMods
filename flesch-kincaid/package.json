@@ -1,0 +1,140 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "flesch-kincaid@^1.0.0",
+        "scope": null,
+        "escapedName": "flesch-kincaid",
+        "name": "flesch-kincaid",
+        "rawSpec": "^1.0.0",
+        "spec": ">=1.0.0 <2.0.0",
+        "type": "range"
+      },
+      "C:\\Users\\bdele\\Documents\\ongo_project"
+    ]
+  ],
+  "_from": "flesch-kincaid@>=1.0.0 <2.0.0",
+  "_id": "flesch-kincaid@1.0.0",
+  "_inCache": true,
+  "_location": "/flesch-kincaid",
+  "_nodeVersion": "5.0.0",
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/flesch-kincaid-1.0.0.tgz_1469393459332_0.30966778146103024"
+  },
+  "_npmUser": {
+    "name": "wooorm",
+    "email": "tituswormer@gmail.com"
+  },
+  "_npmVersion": "3.3.6",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "flesch-kincaid@^1.0.0",
+    "scope": null,
+    "escapedName": "flesch-kincaid",
+    "name": "flesch-kincaid",
+    "rawSpec": "^1.0.0",
+    "spec": ">=1.0.0 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/flesch-kincaid/-/flesch-kincaid-1.0.0.tgz",
+  "_shasum": "0598fd8959913509843ae0a304a4940d2a1fc7fd",
+  "_shrinkwrap": null,
+  "_spec": "flesch-kincaid@^1.0.0",
+  "_where": "C:\\Users\\bdele\\Documents\\ongo_project",
+  "author": {
+    "name": "Titus Wormer",
+    "email": "tituswormer@gmail.com",
+    "url": "http://wooorm.com"
+  },
+  "bugs": {
+    "url": "https://github.com/wooorm/flesch-kincaid/issues"
+  },
+  "contributors": [
+    {
+      "name": "Titus Wormer",
+      "email": "tituswormer@gmail.com",
+      "url": "http://wooorm.com"
+    }
+  ],
+  "dependencies": {},
+  "description": "Formula to detect the grade level of text according to Flesch-Kincaid Grade Level (1975)",
+  "devDependencies": {
+    "browserify": "^13.0.1",
+    "esmangle": "^1.0.1",
+    "is-nan": "^1.2.1",
+    "nyc": "^7.0.0",
+    "remark-cli": "^1.0.0",
+    "remark-comment-config": "^4.0.0",
+    "remark-github": "^5.0.0",
+    "remark-lint": "^4.0.0",
+    "remark-validate-links": "^4.0.0",
+    "tape": "^4.0.0",
+    "xo": "^0.16.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "0598fd8959913509843ae0a304a4940d2a1fc7fd",
+    "tarball": "https://registry.npmjs.org/flesch-kincaid/-/flesch-kincaid-1.0.0.tgz"
+  },
+  "files": [
+    "index.js"
+  ],
+  "gitHead": "6169b389fc25c9c699025ab944ffa190e645a00c",
+  "homepage": "https://github.com/wooorm/flesch-kincaid#readme",
+  "keywords": [
+    "flesch",
+    "kincaid",
+    "readability",
+    "formula"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "wooorm",
+      "email": "tituswormer@gmail.com"
+    }
+  ],
+  "name": "flesch-kincaid",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "remarkConfig": {
+    "output": true,
+    "plugins": {
+      "comment-config": null,
+      "github": null,
+      "lint": {
+        "list-item-spacing": false
+      },
+      "validate-links": null
+    },
+    "settings": {
+      "bullet": "*"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wooorm/flesch-kincaid.git"
+  },
+  "scripts": {
+    "build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+    "build-bundle": "browserify index.js --bare -s fleschKincaid > flesch-kincaid.js",
+    "build-mangle": "esmangle flesch-kincaid.js > flesch-kincaid.min.js",
+    "build-md": "remark . --quiet --frail",
+    "lint": "xo",
+    "test": "npm run build && npm run lint && npm run test-coverage",
+    "test-api": "node test",
+    "test-coverage": "nyc --reporter lcov tape test.js"
+  },
+  "version": "1.0.0",
+  "xo": {
+    "space": true,
+    "ignores": [
+      "flesch-kincaid.js",
+      "flesch-kincaid.min.js"
+    ]
+  }
+}

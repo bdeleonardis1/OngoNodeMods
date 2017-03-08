@@ -1,0 +1,153 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "alex@^1.0.0",
+        "scope": null,
+        "escapedName": "alex",
+        "name": "alex",
+        "rawSpec": "^1.0.0",
+        "spec": ">=1.0.0 <2.0.0",
+        "type": "range"
+      },
+      "C:\\Users\\bdele\\Documents\\ongo_project"
+    ]
+  ],
+  "_from": "alex@>=1.0.0 <2.0.0",
+  "_id": "alex@1.6.1",
+  "_inCache": true,
+  "_location": "/alex",
+  "_nodeVersion": "5.0.0",
+  "_npmUser": {
+    "name": "wooorm",
+    "email": "tituswormer@gmail.com"
+  },
+  "_npmVersion": "3.3.6",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "alex@^1.0.0",
+    "scope": null,
+    "escapedName": "alex",
+    "name": "alex",
+    "rawSpec": "^1.0.0",
+    "spec": ">=1.0.0 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/alex/-/alex-1.6.1.tgz",
+  "_shasum": "dd166233bcfd8d45436a9259ae52c8b9ba69c27a",
+  "_shrinkwrap": null,
+  "_spec": "alex@^1.0.0",
+  "_where": "C:\\Users\\bdele\\Documents\\ongo_project",
+  "author": {
+    "name": "Titus Wormer",
+    "email": "tituswormer@gmail.com",
+    "url": "wooorm.com"
+  },
+  "bin": {
+    "alex": "cli.js"
+  },
+  "bugs": {
+    "url": "https://github.com/wooorm/alex/issues"
+  },
+  "dependencies": {
+    "bail": "^1.0.0",
+    "get-stdin": "^5.0.0",
+    "glob": "^6.0.1",
+    "globby": "^4.0.0",
+    "mdast": "^2.0.0",
+    "mdast-util-to-nlcst": "^1.0.0",
+    "meow": "^3.3.0",
+    "minimatch": "^3.0.0",
+    "retext": "^1.0.0",
+    "retext-english": "^1.0.0",
+    "retext-equality": "^1.5.0",
+    "to-vfile": "^1.0.0",
+    "update-notifier": "^0.5.0",
+    "vfile": "^1.1.0",
+    "vfile-find-down": "^1.0.0",
+    "vfile-find-up": "^1.0.0",
+    "vfile-reporter": "^1.2.0",
+    "vfile-sort": "^1.0.0"
+  },
+  "description": "Catch insensitive, inconsiderate writing",
+  "devDependencies": {
+    "ava": "^0.5.0",
+    "browserify": "^12.0.1",
+    "eslint": "^1.0.0",
+    "esmangle": "^1.0.1",
+    "jscs": "^2.0.0",
+    "jscs-jsdoc": "^1.0.0",
+    "mdast-comment-config": "^1.0.0",
+    "mdast-github": "^1.0.0",
+    "mdast-lint": "^1.0.0",
+    "mdast-toc": "^1.0.0",
+    "mdast-validate-links": "^1.0.0",
+    "nyc": "^3.2.2"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "dd166233bcfd8d45436a9259ae52c8b9ba69c27a",
+    "tarball": "https://registry.npmjs.org/alex/-/alex-1.6.1.tgz"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "gitHead": "82750d9295282d5911f2755c8f7a6357ab939479",
+  "homepage": "https://github.com/wooorm/alex#readme",
+  "keywords": [
+    "cli-app",
+    "cli",
+    "bin",
+    "alex",
+    "equal",
+    "race",
+    "religion",
+    "sex",
+    "orientation",
+    "identity",
+    "gender",
+    "sensitive",
+    "insensitive",
+    "neutral",
+    "writing",
+    "language",
+    "english"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "wooorm",
+      "email": "tituswormer@gmail.com"
+    }
+  ],
+  "name": "alex",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wooorm/alex.git"
+  },
+  "scripts": {
+    "build": "npm run bundle && npm run build-md",
+    "build-md": "mdast . --quiet",
+    "bundle": "browserify index.js -s alex > alex.js",
+    "lint": "npm run lint-api && npm run lint-style && npm run lint-text",
+    "lint-api": "eslint .",
+    "lint-style": "jscs --reporter inline .",
+    "lint-text": "./cli.js . --why",
+    "make": "npm run lint && npm run test-coverage",
+    "postbundle": "esmangle alex.js > alex.min.js",
+    "test": "npm run test-api",
+    "test-api": "ava",
+    "test-coverage": "nyc ava",
+    "test-travis": "npm run test-coverage"
+  },
+  "version": "1.6.1"
+}

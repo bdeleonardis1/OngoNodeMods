@@ -1,0 +1,166 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "syllable@^1.0.0",
+        "scope": null,
+        "escapedName": "syllable",
+        "name": "syllable",
+        "rawSpec": "^1.0.0",
+        "spec": ">=1.0.0 <2.0.0",
+        "type": "range"
+      },
+      "C:\\Users\\bdele\\Documents\\ongo_project"
+    ]
+  ],
+  "_from": "syllable@>=1.0.0 <2.0.0",
+  "_id": "syllable@1.0.0",
+  "_inCache": true,
+  "_location": "/syllable",
+  "_nodeVersion": "5.0.0",
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/syllable-1.0.0.tgz_1470657304513_0.9043780688662082"
+  },
+  "_npmUser": {
+    "name": "wooorm",
+    "email": "tituswormer@gmail.com"
+  },
+  "_npmVersion": "3.3.6",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "syllable@^1.0.0",
+    "scope": null,
+    "escapedName": "syllable",
+    "name": "syllable",
+    "rawSpec": "^1.0.0",
+    "spec": ">=1.0.0 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/syllable/-/syllable-1.0.0.tgz",
+  "_shasum": "ab126af43527c6bc8d47c3c42a405551e1a4c40b",
+  "_shrinkwrap": null,
+  "_spec": "syllable@^1.0.0",
+  "_where": "C:\\Users\\bdele\\Documents\\ongo_project",
+  "author": {
+    "name": "Titus Wormer",
+    "email": "tituswormer@gmail.com",
+    "url": "http://wooorm.com"
+  },
+  "bin": {
+    "syllable": "cli.js"
+  },
+  "bugs": {
+    "url": "https://github.com/wooorm/syllable/issues"
+  },
+  "contributors": [
+    {
+      "name": "Titus Wormer",
+      "email": "tituswormer@gmail.com",
+      "url": "http://wooorm.com"
+    }
+  ],
+  "dependencies": {
+    "has": "^1.0.1",
+    "pluralize": "^3.0.0",
+    "trim": "0.0.1"
+  },
+  "description": "Count syllables in English words",
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "esmangle": "^1.0.0",
+    "execa": "^0.4.0",
+    "nyc": "^7.1.0",
+    "remark-cli": "^1.0.0",
+    "remark-comment-config": "^4.0.0",
+    "remark-github": "^5.0.0",
+    "remark-lint": "^4.0.0",
+    "remark-validate-links": "^4.0.0",
+    "tape": "^4.4.0",
+    "xo": "^0.16.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "ab126af43527c6bc8d47c3c42a405551e1a4c40b",
+    "tarball": "https://registry.npmjs.org/syllable/-/syllable-1.0.0.tgz"
+  },
+  "engines": {
+    "node": ">=0.11.0"
+  },
+  "files": [
+    "problematic.json",
+    "index.js",
+    "cli.js"
+  ],
+  "gitHead": "2ecbd41914544060b44c6baf699c46014de234aa",
+  "homepage": "https://github.com/wooorm/syllable#readme",
+  "keywords": [
+    "detect",
+    "syllables",
+    "natural",
+    "language",
+    "cli",
+    "bin"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "wooorm",
+      "email": "tituswormer@gmail.com"
+    }
+  ],
+  "name": "syllable",
+  "nyc": {
+    "check-coverage": true,
+    "lines": 100,
+    "functions": 100,
+    "branches": 100
+  },
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "remarkConfig": {
+    "output": true,
+    "plugins": {
+      "comment-config": null,
+      "lint": {
+        "heading-increment": false,
+        "no-duplicate-headings": false,
+        "list-item-spacing": false
+      },
+      "github": null,
+      "validate-links": null
+    },
+    "settings": {
+      "bullet": "*"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wooorm/syllable.git"
+  },
+  "scripts": {
+    "build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+    "build-bundle": "browserify index.js -s syllable > syllable.js",
+    "build-mangle": "esmangle syllable.js > syllable.min.js",
+    "build-md": "remark . --quiet --frail",
+    "lint": "xo",
+    "test": "npm run build && npm run lint && npm run test-coverage",
+    "test-api": "node test",
+    "test-coverage": "nyc --reporter lcov tape test/index.js"
+  },
+  "version": "1.0.0",
+  "xo": {
+    "space": true,
+    "rules": {
+      "guard-for-in": "off",
+      "max-lines": "off"
+    },
+    "ignores": [
+      "syllable.js",
+      "syllable.min.js"
+    ]
+  }
+}
